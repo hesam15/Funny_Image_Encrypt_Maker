@@ -17,7 +17,7 @@ def encrypt(path):
     img = Image.open(path)
 
     r, g, b = img.getpixel((1, 2))
-    img.putpixel((1, 1), (r, g, b+len(pass_letters)))
+    img.putpixel((1, 1), (r, g, b-len(pass_letters)))
 
     print(len(pass_letters), len(letters))
     
