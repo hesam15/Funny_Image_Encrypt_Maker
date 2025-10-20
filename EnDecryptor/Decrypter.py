@@ -9,8 +9,8 @@ def decrypter(path):
     first_pixel = img.getpixel((1, 1))
     second_pixel = img.getpixel((1, 2))
 
-    if len(pass_letters) < first_pixel[2] - second_pixel[2]:
-        for i in range((first_pixel[2] - second_pixel[2]) - len(pass_letters)):
+    if len(pass_letters) < second_pixel[2] - first_pixel[2]:
+        for i in range((second_pixel[2] - first_pixel[2]) - len(pass_letters)):
             big_int = max(pass_letters)
             pass_letters.append(big_int+30)
 
